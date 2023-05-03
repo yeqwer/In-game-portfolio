@@ -1,0 +1,207 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc38003c0e0db6641a4762d4f392de52, type: 3}
+  m_Name: New Prefab Palette 1
+  m_EditorClassIdentifier: 
+  prefabs:
+  - gameObject: {fileID: 8800792631077542435, guid: 676467024e36c624b8bf35e0d33187cc, type: 3}
+    settings:
+      m_Strength: 100
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 150.2962, y: 184.8237, z: 205.134}
+      m_ScaleRangeMin: {x: 200, y: 200, z: 200}
+      m_ScaleRangeMax: {x: 400, y: 400, z: 400}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 0
+      m_XRotationBool: 1
+      m_YRotationBool: 1
+      m_ZRotationBool: 1
+      m_XScaleBool: 1
+      m_YScaleBool: 1
+      m_ZScaleBool: 1
+    name: rock18_lr
+  - gameObject: {fileID: 2536552466969112637, guid: 82854852f5f5b494db9c2b404293a966, type: 3}
+    settings:
+      m_Strength: 100
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 150.2962, y: 184.8237, z: 205.134}
+      m_ScaleRangeMin: {x: 200, y: 200, z: 200}
+      m_ScaleRangeMax: {x: 400, y: 400, z: 400}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 0
+      m_XRotationBool: 1
+      m_YRotationBool: 1
+      m_ZRotationBool: 1
+      m_XScaleBool: 1
+      m_YScaleBool: 1
+      m_ZScaleBool: 1
+    name: rock23_lr
+  - gameObject: {fileID: 6592429650808749276, guid: 2ea61e24632a2944cb4ee15f3a1a832e, type: 3}
+    settings:
+      m_Strength: 100
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 150.2962, y: 184.8237, z: 205.134}
+      m_ScaleRangeMin: {x: 200, y: 200, z: 200}
+      m_ScaleRangeMax: {x: 400, y: 400, z: 400}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 0
+      m_XRotationBool: 1
+      m_YRotationBool: 1
+      m_ZRotationBool: 1
+      m_XScaleBool: 1
+      m_YScaleBool: 1
+      m_ZScaleBool: 1
+    name: rock22_lr
+  - gameObject: {fileID: 8908299970978036850, guid: 0b81bbb9ffe6aef4296efda686ba6d19, type: 3}
+    settings:
+      m_Strength: 100
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 150.2962, y: 184.8237, z: 205.134}
+      m_ScaleRangeMin: {x: 200, y: 200, z: 200}
+      m_ScaleRangeMax: {x: 400, y: 400, z: 400}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 0
+      m_XRotationBool: 1
+      m_YRotationBool: 1
+      m_ZRotationBool: 1
+      m_XScaleBool: 1
+      m_YScaleBool: 1
+      m_ZScaleBool: 1
+    name: rock10_lr
+  - gameObject: {fileID: 1182776723235564869, guid: 2d2ef72e75999a74cbbc52415de138fd, type: 3}
+    settings:
+      m_Strength: 100
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 150.2962, y: 184.8237, z: 205.134}
+      m_ScaleRangeMin: {x: 200, y: 200, z: 200}
+      m_ScaleRangeMax: {x: 400, y: 400, z: 400}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 0
+      m_XRotationBool: 1
+      m_YRotationBool: 1
+      m_ZRotationBool: 1
+      m_XScaleBool: 1
+      m_YScaleBool: 1
+      m_ZScaleBool: 1
+    name: rock01_lr
+  - gameObject: {fileID: 5193362239443946324, guid: 5dd937b6e1225e34983feca1fc129355, type: 3}
+    settings:
+      m_Strength: 100
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 150.2962, y: 184.8237, z: 205.134}
+      m_ScaleRangeMin: {x: 200, y: 200, z: 200}
+      m_ScaleRangeMax: {x: 400, y: 400, z: 400}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 0
+      m_XRotationBool: 1
+      m_YRotationBool: 1
+      m_ZRotationBool: 1
+      m_XScaleBool: 1
+      m_YScaleBool: 1
+      m_ZScaleBool: 1
+    name: rock42_lr
+  - gameObject: {fileID: 3617049381844397948, guid: f919ab582377c384d8331dd7a9343b08, type: 3}
+    settings:
+      m_Strength: 100
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 150.2962, y: 184.8237, z: 205.134}
+      m_ScaleRangeMin: {x: 200, y: 200, z: 200}
+      m_ScaleRangeMax: {x: 400, y: 400, z: 400}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 0
+      m_XRotationBool: 1
+      m_YRotationBool: 1
+      m_ZRotationBool: 1
+      m_XScaleBool: 1
+      m_YScaleBool: 1
+      m_ZScaleBool: 1
+    name: rock35_lr
+  - gameObject: {fileID: 5021604015118671804, guid: 10146bf9f831514408fde0bbf4dc01bd, type: 3}
+    settings:
+      m_Strength: 100
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 150.2962, y: 184.8237, z: 205.134}
+      m_ScaleRangeMin: {x: 200, y: 200, z: 200}
+      m_ScaleRangeMax: {x: 400, y: 400, z: 400}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 0
+      m_XRotationBool: 1
+      m_YRotationBool: 1
+      m_ZRotationBool: 1
+      m_XScaleBool: 1
+      m_YScaleBool: 1
+      m_ZScaleBool: 1
+    name: rock21_lr
+  - gameObject: {fileID: 2536552466969112637, guid: 82854852f5f5b494db9c2b404293a966, type: 3}
+    settings:
+      m_Strength: 91.9
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 150.2962, y: 184.8237, z: 205.134}
+      m_ScaleRangeMin: {x: 200, y: 200, z: 200}
+      m_ScaleRangeMax: {x: 400, y: 400, z: 400}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 0
+      m_XRotationBool: 1
+      m_YRotationBool: 1
+      m_ZRotationBool: 1
+      m_XScaleBool: 1
+      m_YScaleBool: 1
+      m_ZScaleBool: 1
+    name: rock23_lr
+  - gameObject: {fileID: 3796256093307980859, guid: e5d38b229ea33954cbae75188f0346bf, type: 3}
+    settings:
+      m_Strength: 100
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 150.2962, y: 184.8237, z: 205.134}
+      m_ScaleRangeMin: {x: 200, y: 200, z: 200}
+      m_ScaleRangeMax: {x: 400, y: 400, z: 400}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 0
+      m_XRotationBool: 1
+      m_YRotationBool: 1
+      m_ZRotationBool: 1
+      m_XScaleBool: 1
+      m_YScaleBool: 1
+      m_ZScaleBool: 1
+    name: rock05_lr
+  - gameObject: {fileID: 3145118891385678715, guid: ca7dfc9bd97c82448ba120005565402c, type: 3}
+    settings:
+      m_Strength: 100
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 150.2962, y: 184.8237, z: 205.134}
+      m_ScaleRangeMin: {x: 200, y: 200, z: 200}
+      m_ScaleRangeMax: {x: 400, y: 400, z: 400}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 0
+      m_XRotationBool: 1
+      m_YRotationBool: 1
+      m_ZRotationBool: 1
+      m_XScaleBool: 1
+      m_YScaleBool: 1
+      m_ZScaleBool: 1
+    name: rock14_lr
+  - gameObject: {fileID: 1484860398519837671, guid: f428a4700c03e5748b13dd3cf75a69ce, type: 3}
+    settings:
+      m_Strength: 100
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 150.2962, y: 184.8237, z: 205.134}
+      m_ScaleRangeMin: {x: 200, y: 200, z: 200}
+      m_ScaleRangeMax: {x: 400, y: 400, z: 400}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 0
+      m_XRotationBool: 1
+      m_YRotationBool: 1
+      m_ZRotationBool: 1
+      m_XScaleBool: 1
+      m_YScaleBool: 1
+      m_ZScaleBool: 1
+    name: rock25_lr
