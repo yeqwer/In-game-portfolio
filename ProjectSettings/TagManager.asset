@@ -17,6 +17,7 @@ TagManager:
   - InfoBoardThree
   - InfoBoardFour
   - InfoBoardFive
+  - TriggerDot
   layers:
   - Default
   - TransparentFX
