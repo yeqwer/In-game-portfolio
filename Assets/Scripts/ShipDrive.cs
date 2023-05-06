@@ -87,7 +87,8 @@ public class ShipDrive : MonoBehaviour
         {
             canAfterTimer = false;
             timer -= Time.deltaTime;
-        } else { canAfterTimer = true; }   
+        } else { canAfterTimer = true; }  
+        
     }
 
     private void Forcer()

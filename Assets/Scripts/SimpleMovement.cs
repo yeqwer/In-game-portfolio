@@ -7,8 +7,8 @@ using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 public class SimpleMovement : MonoBehaviour
 {
     public float maxSpeed = 8f;
-    public float maxSpeedBack = 2f;
-    public float rotationSpeed = 2f;
+    [HideInInspector] public float maxSpeedStart;
+   // public float rotationSpeed = 100f;
     public float speedUpRotation = -7f;
     public float afterMoveVelocity = 5f;
     
@@ -27,21 +27,14 @@ public class SimpleMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         controls = new NewControls();
         checkLoc = GetComponent<CheckLocation>();
+        maxSpeedStart = maxSpeed;
     }
 
 
     private void Update()
     {
+        Movement();
         Timer();
-
-        if (checkLoc.itWater)
-        {
-            Movement();
-        }
-        else
-        {
-            Dropper(10f);
-        }
     }
 
     private void Movement()
@@ -51,8 +44,8 @@ public class SimpleMovement : MonoBehaviour
             Vector2 move = controls.Movement.Joistisk.ReadValue<Vector2>();
             if (move.y < 0)
             {
-                transform.Translate(transform.forward * move.y * Time.deltaTime * maxSpeedBack, Space.World);
-                transform.Rotate(Vector3.up * -move.x * rotationSpeed * Time.deltaTime);
+                transform.Translate(transform.forward * move.y * Time.deltaTime * maxSpeed/4, Space.World);
+                transform.Rotate(Vector3.up * -move.x * maxSpeed * 6 * Time.deltaTime);
                 
                 partSys.Stop();
             }
@@ -71,7 +64,7 @@ public class SimpleMovement : MonoBehaviour
                     transform.Translate(transform.forward * Time.deltaTime * maxSpeed, Space.World);
                 }
 
-                transform.Rotate(Vector3.up * move.x * rotationSpeed * Time.deltaTime);
+                transform.Rotate(Vector3.up * move.x * maxSpeed * 12 * Time.deltaTime);
                 
                 partSys.Play();
                 flag = true;

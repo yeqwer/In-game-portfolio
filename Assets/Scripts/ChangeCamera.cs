@@ -25,7 +25,7 @@ public class ChangeCamera : MonoBehaviour
     public Transform startLookAtObject;
     public Transform startFollowObject;
     public float startMaxSpeed;
-    public float startRotationSpeed;
+    //public float startRotationSpeed;
     public float startSpeedUpRotation;
     public float startAfterMoveVelocity;
 
@@ -52,7 +52,7 @@ public class ChangeCamera : MonoBehaviour
         startFollowObject = cam.Follow;
 
         startMaxSpeed = simpleMovement.maxSpeed;
-        startRotationSpeed = simpleMovement.rotationSpeed;
+        //startRotationSpeed = simpleMovement.rotationSpeed;
         startSpeedUpRotation = simpleMovement.speedUpRotation;
         startAfterMoveVelocity = simpleMovement.afterMoveVelocity;
     }
@@ -82,7 +82,7 @@ public class ChangeCamera : MonoBehaviour
             startFollowObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
 
             simpleMovement.maxSpeed = 0f;
-            simpleMovement.rotationSpeed = 0f;
+            //simpleMovement.rotationSpeed = 0f;
             simpleMovement.speedUpRotation = 0f;
             simpleMovement.afterMoveVelocity = 0f;
 
@@ -102,7 +102,7 @@ public class ChangeCamera : MonoBehaviour
             startFollowObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
 
             simpleMovement.maxSpeed = startMaxSpeed;
-            simpleMovement.rotationSpeed = startRotationSpeed;
+            //simpleMovement.rotationSpeed = startRotationSpeed;
             simpleMovement.speedUpRotation = startSpeedUpRotation;
             simpleMovement.afterMoveVelocity = startAfterMoveVelocity;
             
