@@ -127,6 +127,15 @@ public partial class @NewControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Restart"",
+                    ""type"": ""Button"",
+                    ""id"": ""73dc93db-40f1-4b0e-9163-f8fa6ae2feb0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -138,6 +147,17 @@ public partial class @NewControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""E"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""deaf81b9-0ae6-4ae3-a286-14b3cc471654"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Restart"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -153,6 +173,7 @@ public partial class @NewControls : IInputActionCollection2, IDisposable
         // Menu
         m_Menu = asset.FindActionMap("Menu", throwIfNotFound: true);
         m_Menu_E = m_Menu.FindAction("E", throwIfNotFound: true);
+        m_Menu_Restart = m_Menu.FindAction("Restart", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -254,11 +275,13 @@ public partial class @NewControls : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Menu;
     private IMenuActions m_MenuActionsCallbackInterface;
     private readonly InputAction m_Menu_E;
+    private readonly InputAction m_Menu_Restart;
     public struct MenuActions
     {
         private @NewControls m_Wrapper;
         public MenuActions(@NewControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @E => m_Wrapper.m_Menu_E;
+        public InputAction @Restart => m_Wrapper.m_Menu_Restart;
         public InputActionMap Get() { return m_Wrapper.m_Menu; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -271,6 +294,9 @@ public partial class @NewControls : IInputActionCollection2, IDisposable
                 @E.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnE;
                 @E.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnE;
                 @E.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnE;
+                @Restart.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnRestart;
+                @Restart.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnRestart;
+                @Restart.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnRestart;
             }
             m_Wrapper.m_MenuActionsCallbackInterface = instance;
             if (instance != null)
@@ -278,6 +304,9 @@ public partial class @NewControls : IInputActionCollection2, IDisposable
                 @E.started += instance.OnE;
                 @E.performed += instance.OnE;
                 @E.canceled += instance.OnE;
+                @Restart.started += instance.OnRestart;
+                @Restart.performed += instance.OnRestart;
+                @Restart.canceled += instance.OnRestart;
             }
         }
     }
@@ -290,5 +319,6 @@ public partial class @NewControls : IInputActionCollection2, IDisposable
     public interface IMenuActions
     {
         void OnE(InputAction.CallbackContext context);
+        void OnRestart(InputAction.CallbackContext context);
     }
 }

@@ -13,6 +13,7 @@ public class ShipDrive : MonoBehaviour
     public float rotationSpeed = 2f;
     public float speedUpRotation = -7f;
     public float afterMoveVelocity = 5f;
+    [HideInInspector] public float maxSpeedStart;
 
     protected Rigidbody rb;
     public NewControls controls;
@@ -24,14 +25,14 @@ public class ShipDrive : MonoBehaviour
 
     private float timer;
 
-    private CheckLocation checkLoc;
+    private CheckLocationForScene1 checkLoc;
 
     public void Awake()
     {
         partSys = GetComponentInChildren<ParticleSystem>();
         rb = GetComponent<Rigidbody>();
         controls = new NewControls();
-        checkLoc = GetComponent<CheckLocation>();
+        checkLoc = GetComponent<CheckLocationForScene1>();
     }
     
 
@@ -63,8 +64,14 @@ public class ShipDrive : MonoBehaviour
                 Quaternion targetRotation = Quaternion.LookRotation(direction);
                 transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
             }
-
-            transform.Translate(transform.forward * Time.deltaTime * maxSpeed, Space.World);
+            if (controls.Movement.Shift.inProgress)
+            {
+                transform.Translate(transform.forward * Time.deltaTime * maxSpeed * 1.5f, Space.World);
+            }
+            else 
+            { 
+                transform.Translate(transform.forward * Time.deltaTime * maxSpeed, Space.World);
+            } 
             //transform.eulerAngles = new Vector3(speedUpRotation, transform.eulerAngles.y, transform.eulerAngles.z);
             flag = true;
 
