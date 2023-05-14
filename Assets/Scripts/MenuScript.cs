@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class MenuScript : MonoBehaviour
 {
+    
     private CheckLocation checkLoc;
     public NewControls controls;
 
@@ -15,6 +16,7 @@ public class MenuScript : MonoBehaviour
 
     private void Awake()
     {
+        
         checkLoc = FindObjectOfType<CheckLocation>();
         controls = new NewControls();
     }
@@ -23,20 +25,26 @@ public class MenuScript : MonoBehaviour
         if (checkLoc.pressE)
         {
             textPressE.SetActive(true);
+            
         }
         else { textPressE.SetActive(false); }
 
         if (checkLoc.pressRestart)
         {
             textRestart.SetActive(true);
-
+            
         }
         else { textRestart.SetActive(false); }
 
-        if (controls.Menu.Restart.triggered | textRestart.activeSelf)
+        if (controls.Menu.Restart.triggered & textRestart.activeSelf)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Restart();
         } 
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private void OnEnable()

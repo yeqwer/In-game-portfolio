@@ -104,6 +104,17 @@ public partial class @NewControls : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""88e40429-8048-4501-b1ba-b61f7b5bd2ef"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Joistisk"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""06b08a01-3563-4064-9477-c8d56301f25d"",
                     ""path"": ""<Keyboard>/shift"",
                     ""interactions"": """",

@@ -29,8 +29,11 @@ public class ChangeCameraForScene1 : MonoBehaviour
     public float startSpeedUpRotation;
     public float startAfterMoveVelocity;
 
+    public SoundController soundController;
+
     private void Awake()
     {
+        soundController = FindObjectOfType<SoundController>();
         cam = GetComponent<CinemachineVirtualCamera>();
         controls = new NewControls();
         checkLoc = FindObjectOfType<CheckLocationForScene1>();
@@ -74,10 +77,13 @@ public class ChangeCameraForScene1 : MonoBehaviour
         }
     }
 
-    private void ChangeCamTarget()
+    public void ChangeCamTarget()
     {
+        soundController.Click();
+
         if (canActiveButton)
         {
+
             //cam.transform.rotation = Quaternion.Lerp(transform.rotation, TargetLookAtObject.transform.rotation, Time.deltaTime * 10f);
             startFollowObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
 
@@ -89,7 +95,7 @@ public class ChangeCameraForScene1 : MonoBehaviour
             cam.LookAt = TargetLookAtObject.transform;
             cam.Follow = TargetFollowObject.transform;
             //transposerCam.m_FollowOffset = new Vector3(0, 0, -1.3f); //Offset Camera    
-            (camBody as CinemachineFramingTransposer).m_CameraDistance = 2.8f;
+            (camBody as CinemachineFramingTransposer).m_CameraDistance = 2.1f;
             (camBody as CinemachineFramingTransposer).m_TrackedObjectOffset = Vector3.zero;
 
 

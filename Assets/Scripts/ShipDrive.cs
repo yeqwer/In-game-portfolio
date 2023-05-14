@@ -26,9 +26,11 @@ public class ShipDrive : MonoBehaviour
     private float timer;
 
     private CheckLocationForScene1 checkLoc;
+    private SoundController soundController;
 
     public void Awake()
     {
+        soundController = FindObjectOfType<SoundController>();
         partSys = GetComponentInChildren<ParticleSystem>();
         rb = GetComponent<Rigidbody>();
         controls = new NewControls();
@@ -67,10 +69,12 @@ public class ShipDrive : MonoBehaviour
             if (controls.Movement.Shift.inProgress)
             {
                 transform.Translate(transform.forward * Time.deltaTime * maxSpeed * 1.5f, Space.World);
+                soundController.SoundDrive(1.8f);
             }
             else 
             { 
                 transform.Translate(transform.forward * Time.deltaTime * maxSpeed, Space.World);
+                soundController.SoundDrive(1.4f);
             } 
             //transform.eulerAngles = new Vector3(speedUpRotation, transform.eulerAngles.y, transform.eulerAngles.z);
             flag = true;
@@ -83,7 +87,7 @@ public class ShipDrive : MonoBehaviour
             {
                 Forcer();
             }
-
+            soundController.SoundDrive(1f);
             partSys.Stop();
         }
     }
