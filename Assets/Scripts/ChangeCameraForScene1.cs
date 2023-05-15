@@ -95,7 +95,7 @@ public class ChangeCameraForScene1 : MonoBehaviour
             cam.LookAt = TargetLookAtObject.transform;
             cam.Follow = TargetFollowObject.transform;
             //transposerCam.m_FollowOffset = new Vector3(0, 0, -1.3f); //Offset Camera    
-            (camBody as CinemachineFramingTransposer).m_CameraDistance = 2.1f;
+            (camBody as CinemachineFramingTransposer).m_CameraDistance = 2.5f;
             (camBody as CinemachineFramingTransposer).m_TrackedObjectOffset = Vector3.zero;
 
 
